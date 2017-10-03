@@ -76,7 +76,7 @@ class UsersController extends Controller
             $upload_path = $request->file('avatar')->store($user_avatar_path);
             $avatar_filename = str_replace($user_avatar_path . '/', '', $upload_path);
             $user->avatar = $avatar_filename;
-        } 
+        }
 
         $user->save();
 

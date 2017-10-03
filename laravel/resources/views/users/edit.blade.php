@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -7,8 +7,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Edycja użytkownika</div>
                 <div class="panel-body">
-
-                    <img src="{{ asset('storage/users/' . $user->id . '/avatars/' . $user->avatar) }}" alt="" class="img-responsive">
+                    
+                    <img src="{{ url('user-avatar/'. $user->id . '/600') }}" alt="" class="img-responsive">
+                    <br>
 
                     <form method="POST" action="{{ url('/users/' . $user->id) }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
